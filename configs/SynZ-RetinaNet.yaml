@@ -1,0 +1,46 @@
+MODEL:
+  META_ARCHITECTURE: "RetinaNet"
+  BACKBONE:
+    NAME: "build_retinanet_resnet_fpn_backbone"
+  RESNETS:
+    DEPTH: 50
+    OUT_FEATURES: ["res3", "res4", "res5"]
+  ANCHOR_GENERATOR:
+    SIZES:
+      !!python/object/apply:eval [
+        "[[x, x * 2**(1.0/3), x * 2**(2.0/3) ] for x in [32, 64, 128, 256, 512 ]]",
+      ]
+  FPN:
+    IN_FEATURES: ["res3", "res4", "res5"]
+  RETINANET:
+    IOU_THRESHOLDS: [0.4, 0.5]
+    IOU_LABELS: [0, -1, 1]
+    SMOOTH_L1_LOSS_BETA: 0.0
+    NUM_CLASSES: 21
+  ROI_HEADS:
+    BATCH_SIZE_PER_IMAGE: 256
+    NUM_CLASSES: 21
+  WEIGHTS: "detectron2://ImageNetPretrained/MSRA/R-50.pkl"
+DATASETS:
+  TRAIN: ("synz_train",)
+  TEST: ("synz_val",)
+DATALOADER:
+  NUM_WORKERS: 2
+SOLVER:
+  LR_SCHEDULER_NAME: WarmupCosineLR
+  IMS_PER_BATCH: 64
+  BASE_LR: 0.039999999
+  STEPS: (1500, 1950, 2220, 3720, 4170, 4440, 5940, 6390, 6660, 8160, 8610, 8880, 10380, 10830, 11100, 12600, 13050, 13320, )
+  MAX_ITER: 13320
+  CHECKPOINT_PERIOD: 450
+INPUT:
+  MIN_SIZE_TRAIN: (640, )
+  MAX_SIZE_TRAIN: 640
+  MIN_SIZE_TEST: 640
+  MAX_SIZE_TEST: 640
+  RANDOM_FLIP: none
+TEST:
+  DETECTIONS_PER_IMAGE: 50
+  EVAL_PERIOD: 0
+
+VERSION: 2
