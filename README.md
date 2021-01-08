@@ -46,7 +46,7 @@ To generate SynZ sketches from scratch,
 
   - UISketch dataset from [kaggle](https://www.kaggle.com/vinothpandian/uisketch)
 
-- Either run the notebooks described in previous section to generate `SynZ_ready_annotations.csv` file or download the SynZ annotations from [here](https://designwitheve.com/dataset/synz/SynZ_ready_annotations.csv)
+- Either run the notebooks described in previous section to generate `SynZ_ready_annotations.csv` file or download the SynZ annotations from [here](https://blackbox-toolkit.com/datasets/SynZ_ready_annotations.csv)
 
 - Install the necessary requirements from `requirements.txt` file
 
@@ -70,7 +70,7 @@ To generate SynZ sketches from scratch,
 
 ## Downlading MetaMorph model trained weights
 
-- Download the trained SynZ checkpoint from [here](http://designwitheve.com/models/synz_checkpoint.tar.gz) to [`models`](./models) folder
+- Download the trained SynZ checkpoint from [here](https://blackbox-toolkit.com/models/synz_checkpoint.tar.gz) to [`models`](./models) folder
 - Extract the `synz_checkpoint.tar.gz` folder to acquire the MetaMorph model's trained weights from `model_final.pth`
 
 ---
