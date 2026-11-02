@@ -111,7 +111,7 @@ testpath==0.4.4
 threadpoolctl==2.1.0
 tifffile==2020.12.8
 toml==0.10.2
-torch==1.7.1+cu110
+torch==2.13.0
 torchaudio==0.7.2
 torchvision==0.8.2+cu110
 tornado==6.6
