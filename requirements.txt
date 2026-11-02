@@ -76,7 +76,7 @@ prompt-toolkit==3.0.8
 protobuf==3.18.3
 ptyprocess==0.6.0
 pyarrow==2.0.0
-pyasn1==0.4.8
+pyasn1==0.6.5
 pyasn1-modules==0.2.8
 pycocotools @ git+https://github.com/cocodataset/cocoapi.git@8c9bcc3cf640524c4c20a9c40e89cb6a2f2fa0e9#subdirectory=PythonAPI
 pycparser==2.20
