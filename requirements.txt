@@ -82,7 +82,7 @@ pycocotools @ git+https://github.com/cocodataset/cocoapi.git@8c9bcc3cf640524c4c2
 pycparser==2.20
 pydot==1.4.1
 pygame==2.0.0
-Pygments==2.7.3
+Pygments==2.20.0
 pylint==4.0.9
 pyparsing==2.4.7
 pyrsistent==0.17.3
